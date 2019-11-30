@@ -12,9 +12,9 @@ node{
     stage('Run image') {
         docker.image('xavki/nginx').withRun('-p 80:80') { c ->
 
-        sh 'docker ps'
+        batch 'docker ps'
 
-        sh 'curl localhost'
+        batch 'curl localhost'
 
     }
 
